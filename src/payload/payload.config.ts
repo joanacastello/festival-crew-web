@@ -24,6 +24,7 @@ import { Footer } from './globals/Footer'
 import { Header } from './globals/Header'
 import { Settings } from './globals/Settings'
 import Genres from './collections/Genres'
+import Events from './collections/Events'
 
 const generateTitle: GenerateTitle = () => {
   return 'My Website'
@@ -67,7 +68,7 @@ export default buildConfig({
     },
   }),
   serverURL: process.env.PAYLOAD_PUBLIC_SERVER_URL,
-  collections: [Pages, Posts, Projects, Media, Categories, Users, Comments, Genres],
+  collections: [Pages, Posts, Projects, Media, Categories, Users, Comments, Genres, Events],
   globals: [Settings, Header, Footer],
   typescript: {
     outputFile: path.resolve(__dirname, 'payload-types.ts'),
